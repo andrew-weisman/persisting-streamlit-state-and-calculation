@@ -1,0 +1,21 @@
+{
+  "imageRid" : "ri.foundry-container-service..image.streamlit",
+  "idleTimeout" : "THIRTY_MINUTES",
+  "resources" : {
+    "cpu" : 1,
+    "gpu" : 0,
+    "memoryInMb" : 8192
+  },
+  "inputs" : [ ],
+  "networkPolicies" : [ ],
+  "environmentVariables" : {
+    "ENABLE_MANAGED_CONDA_ENVIRONMENTS" : "true",
+    "ENABLE_MANAGED_CRAN_ENVIRONMENTS" : "false",
+    "ENABLE_MANAGED_R_CONDA_ENVIRONMENTS" : "false",
+    "ENABLE_WRITE_BRANCH_PREFIX" : "false",
+    "STREAMLIT_APP_PATH" : "app2.py",
+    "UPLOAD_CODE_CHECKPOINTS" : "false"
+  },
+  "allowDownloads" : true,
+  "shared" : false
+}
