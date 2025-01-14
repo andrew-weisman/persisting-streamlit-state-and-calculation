@@ -6,8 +6,8 @@ def generate_sequence(gs, number):
     # Every 1 second, add 1 to number and append the new number to a running list. After 5 seconds, assign the sequence to the global state.
     sequence = []
     for _ in range(5):
-        number += 1
         sequence.append(number)
+        number += 1
         time.sleep(1)
     gs.session_state['sequence'] = sequence
 
@@ -59,6 +59,15 @@ def main():
     initialize_state(gs, key, [])  # note saving to session state is unnecessary, so probably make optional in initialize_state()
     st.button('Generate sequence', on_click=generate_sequence, args=(gs, number))
     sequence = gs.session_state[key]
+
+    st.markdown('''
+Steps:
+                
+1. Press the "Generate sequence" button above.
+2. Immediately refresh the browser.
+3. Keep pressing "r" to rerun the app.
+4. After five seconds, the new sequence will be displayed.
+                ''')
 
     st.write(f'sequence: {sequence}')
 
