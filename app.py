@@ -6,6 +6,7 @@
 # Import required libraries
 import streamlit as st
 import time
+import fibonacci
 
 
 # Every seconds_to_wait seconds, add 1 to starting_number and append the new number to a running list. After iterations_to_run iterations, return the resulting sequence.
@@ -95,7 +96,8 @@ To clear the state, press the "Clear states" button below.
     # Use the "number" key in the global state to demonstrate the persistence of not only the "return_value" key in the global state, but also the calculation of it.
     key = 'return_value'
     initialize_state(gs, key, [])  # note saving to session state is unnecessary unlike above, so probably make that optional in initialize_state()
-    button_text = 'Generate sequence'; args = (generate_sequence, number); kwargs = {'seconds_to_wait': 1, 'iterations_to_run': 5}  # swap this line out for a different one to run a different long-running function with different arguments
+    # button_text = 'Generate sequence'; args = (generate_sequence, number); kwargs = {'seconds_to_wait': 1, 'iterations_to_run': 5}  # swap this line out for a different one to run a different long-running function with different arguments
+    button_text = 'Calculate Fibonacci'; args = (fibonacci.fibonacci, number); kwargs = {}
     st.button(button_text, on_click=callback_for_long_running_function, args=(gs,) + args, kwargs=kwargs)
     return_value = gs.session_state[key]
 
