@@ -1,6 +1,6 @@
 {
   "imageRid" : "ri.foundry-container-service..image.streamlit",
-  "idleTimeout" : "THIRTY_MINUTES",
+  "idleTimeout" : "SIX_HOURS",
   "resources" : {
     "cpu" : 1,
     "gpu" : 0,
