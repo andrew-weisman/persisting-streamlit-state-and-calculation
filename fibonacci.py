@@ -12,9 +12,6 @@ def get_timestamp(pretty=False):
     else:
         return datetime.now(pytz.timezone('US/Eastern')).strftime("%Y%m%d_%H%M%S_%Z")
     
-def fibonacci_caller(n):
-    return f'Completed {get_timestamp(pretty=False)}: {n}th number in Fibonacci sequence is {fibonacci(n)}.'
-
 def fibonacci(n):
     if n <= 1:
        return n
