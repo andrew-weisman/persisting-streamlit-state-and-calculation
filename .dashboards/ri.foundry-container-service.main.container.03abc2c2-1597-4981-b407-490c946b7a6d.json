@@ -13,7 +13,7 @@
     "ENABLE_MANAGED_CRAN_ENVIRONMENTS" : "false",
     "ENABLE_MANAGED_R_CONDA_ENVIRONMENTS" : "false",
     "ENABLE_WRITE_BRANCH_PREFIX" : "false",
-    "STREAMLIT_APP_PATH" : "app.py",
+    "STREAMLIT_APP_PATH" : "streamlit_app.py",
     "UPLOAD_CODE_CHECKPOINTS" : "false"
   },
   "allowDownloads" : true,
