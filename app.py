@@ -34,6 +34,8 @@ def main():
     main_columns = st.columns([1/3, 2/3])
     with main_columns[0]:
 
+        st.write(os.listdir())
+
         # Display README.md as markdown in this app.
         with open(os.path.join(os.getcwd(), 'README.md'), 'r') as f:
             st.markdown(f.read())
