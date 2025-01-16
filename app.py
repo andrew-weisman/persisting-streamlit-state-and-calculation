@@ -4,6 +4,7 @@ import long_running_function_app
 import job_monitor
 from datetime import datetime
 import pytz
+import os
 
 
 # Define the main function.
@@ -34,7 +35,7 @@ def main():
     with main_columns[0]:
 
         # Display README.md as markdown in this app.
-        with open('README.md', 'r') as f:
+        with open(os.path.join(os.getcwd(), 'README.md'), 'r') as f:
             st.markdown(f.read())
 
     # In the second of two main columns...
